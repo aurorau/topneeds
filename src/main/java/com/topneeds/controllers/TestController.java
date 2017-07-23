@@ -3,9 +3,7 @@ package com.topneeds.controllers;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
 /**
  * Created by Iroshan on 5/10/2017.
  */
