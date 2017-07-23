@@ -5,7 +5,26 @@ spring.datasource:
   url: jdbc:mysql://localhost/topneeds
   username: root
   password: Aurorau2425@
-  driverClassName: com.mysql.jdbc.Driver
+ # driverClassName: com.mysql.jdbc.Driver // spring boot can isentify driver class with datasource url
   testWhileIdle: true
   validationQuery: SELECT 1
   timeBetweenEvictionRunsMillis: 60000
+
+spring.data.jpa.repositories.enabled: true #It enables JPA repositories. The default value is true.
+
+spring.jpa:
+  show-sql: true                     #It enables logging of SQL statements. Default value is false.
+  #open-in-view:                    #The default value is true. It binds a JPA EntityManager to the thread for the entire processing of the request.
+  #properties.*:                    #It sets additional native properties to set on the JPA provider.
+  #database:                        #It targets database to operate on. By default embedded database is auto-detected.
+  #database-platform:               #It is used to provide the name of database to operate on. By default it is auto- detected.
+  generate.ddl: false               #It is used to initialize schema on startup. By default the value is false.
+  hibernate:
+    ddl-auto: update           #It is DDL mode used for embedded database. Default value is create-drop.
+    #naming.implicit-strategy:      #It is Hibernate 5 implicit naming strategy fully qualified name.
+    #naming.physical-strategy:      #It is Hibernate 5 physical naming strategy fully qualified name.
+    #use-new-id-generator-mappings: #It is used for Hibernate IdentifierGenerator for AUTO, TABLE and SEQUENCE.
+
+spring.jpa.properties:
+  hibernate.dialect: org.hibernate.dialect.MySQLDialect
+  hibernate.format_sql: false
