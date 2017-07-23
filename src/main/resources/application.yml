@@ -28,3 +28,25 @@ spring.jpa:
 spring.jpa.properties:
   hibernate.dialect: org.hibernate.dialect.MySQLDialect
   hibernate.format_sql: false
+
+---
+spring:
+    profiles: test-aws
+    #active: test-aws
+
+spring.datasource:
+  url: jdbc:mysql://test.chrong2tuj5q.us-east-2.rds.amazonaws.com:3306/topneeds
+  username: tn_aurora
+  password: aurorau2425
+
+spring.data.jpa.repositories.enabled: true
+
+spring.jpa:
+  show-sql: true
+  generate.ddl: false
+  hibernate:
+    ddl-auto: update
+
+spring.jpa.properties:
+  hibernate.dialect: org.hibernate.dialect.MySQLDialect
+  hibernate.format_sql: false
